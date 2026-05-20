@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Sohit Tiwari</title>
+  <meta name="description" content="Sohit Tiwari — software developer based in Indore. Building fast, accessible web apps with clean UI and solid engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/png" href="./images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+  <link rel="apple-touch-icon" href="./images/logo.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="logo" href="#top" aria-label="Sohit Tiwari — go to top">
+      <img
+        src="./images/logo.png"
+        alt="Sohit Tiwari"
+        width="70"
+        height="70"
+        decoding="async"
+      >
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Tech Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-end">
+      <a class="btn header-cta" href="#contact">Let's Talk →</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="nav-backdrop" hidden aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="hero" aria-label="Intro">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="content hero-content">
+          <p class="eyebrow hero-anim" style="--d: 0.1s">Full Stack Developer</p>
+          <h1 class="hero-name hero-anim" style="--d: 0.2s">Sohit Tiwari</h1>
+          <p class="lead hero-anim" style="--d: 0.35s">I build modern, responsive and blazing fast web experiences with clean UI, solid engineering, and attention to detail.</p>
+
+          <div class="hero-meta hero-anim" style="--d: 0.5s" aria-label="Highlights">
+            <span class="pill"><i class="fa-solid fa-bolt"></i> Performance-first</span>
+            <span class="pill"><i class="fa-solid fa-universal-access"></i> Accessible UI</span>
+            <span class="pill"><i class="fa-solid fa-shield-halved"></i> Production-ready</span>
+          </div>
+
+          <div class="buttons hero-anim" style="--d: 0.65s">
+            <a class="primary" href="#contact">Contact Me</a>
+            <a class="secondary" href="./images/Sohit_Resume.pdf" download>Download Resume</a>
+          </div>
+
+          <div class="socials hero-anim" style="--d: 0.8s" aria-label="Social links">
+            <a href="https://github.com/sohitgithub" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sohittiwari/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sohit_tiwari_nagod" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow glow1" aria-hidden="true"></div>
+      <div class="glow glow2" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about" aria-label="About" data-reveal>
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p class="muted">
+            I’m a developer focused on building modern interfaces and reliable systems. I enjoy turning complex problems into
+            simple, delightful experiences — and shipping features that are easy to maintain.
+          </p>
+          <ul class="highlights">
+            <li><strong>Frontend</strong>: HTML, CSS, JavaScript, React</li>
+            <li><strong>Backend</strong>: Node.js, APIs, Databases</li>
+            <li><strong>Quality</strong>: Performance, accessibility, clean code</li>
+          </ul>
+
+          <div class="about-stats" aria-label="Quick stats">
+            <div class="stat">
+              <div class="stat-num">4+</div>
+              <div class="stat-label muted">Projects shipped</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">2+</div>
+              <div class="stat-label muted">Years building</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">∞</div>
+              <div class="stat-label muted">Curiosity</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-orbit" aria-label="Tech orbit">
+          <div class="orbit-wrapper">
+            <div class="center-img">
+              <img src="./images/image.png" alt="Profile photo" />
+            </div>
+
+            <div class="orbit" aria-hidden="true">
+              <span title="HTML"><i class="fab fa-html5"></i></span>
+              <span title="CSS"><i class="fab fa-css3-alt"></i></span>
+              <span title="JavaScript"><i class="fab fa-js"></i></span>
+              <span title="React"><i class="fab fa-react"></i></span>
+              <span title="Node.js"><i class="fab fa-node-js"></i></span>
+              <span title="Laravel"><i class="fab fa-laravel"></i></span>
+              <span title="Database"><i class="fas fa-database"></i></span>
+              <span title="Git"><i class="fab fa-git-alt"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-label="Projects" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-media">
+              <img src="./images/symbiotec1.png" alt="Project preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Symbiotec Pharmalab</h3>
+              <p class="muted">A high-performance enterprise platform with clean UI, role-based flows, and solid performance.</p>
+              <a class="project-btn" href="https://symbiotec.com/" aria-label="Live demo of Symbiotec Pharmalab">
+                <i class="fa-regular fa-eye"></i>
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media">
+              <img src="./images/simran.jpg" alt="Project preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Simran Agritech</h3>
+              <p class="muted">Simran Agritech is a leading agro-processing company specializing in high-quality soy-based products and protein solutions.</p>
+              <a class="project-btn" href="https://simranagritech.com/" aria-label="Live demo of Gaming Zone Arena">
+                <i class="fa-regular fa-eye"></i>
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media">
+              <img src="./images/skolarit.png" alt="Project preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+                <h3>Skolarit</h3>
+                <p class="muted">Skolarit is an online learning platform focused on AI and Machine Learning education, offering beginner-friendly courses designed by industry experts. </p>
+              <a class="project-btn" href="https://skolarit.com/" aria-label="Live demo of Edux Services">
+                <i class="fa-regular fa-eye"></i>
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media">
+              <img src="./images/livinda.png" alt="Project preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Livinda</h3>
+              <p class="muted">Livinda is a family-owned confectionery brand focused on manufacturing premium chocolates, candies, wafers, and lollipops using high-quality ingredients.</p>
+              <a class="project-btn" href="https://livinda.in/" aria-label="Live demo of Aurex">
+                <i class="fa-regular fa-eye"></i>
+                Live Demo
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="experience" class="section" aria-label="Experience" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="t-item" data-reveal>
+            <div class="t-content">
+              <div class="t-top">
+                <h3>Software Developer</h3>
+                <span class="muted">SoftwareHouse Technology • 2024 — Present</span>
+              </div>
+              <ul class="bullets">
+                <li>Building and maintaining web applications with clean UI and responsive layouts.</li>
+                <li>Working on feature delivery, bug fixes, and production releases.</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="t-item" data-reveal>
+            <div class="t-content">
+              <div class="t-top">
+                <h3>MERN Stack Training</h3>
+                <span class="muted">HCL Academy • 6 month</span>
+              </div>
+              <ul class="bullets">
+                <li>Hands-on training across MongoDB, Express, React, and Node.js fundamentals.</li>
+                <li>Built mini-projects and improved problem-solving skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-label="Tech stack" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Tech Stack</h2>
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-card skill-react" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-react"></i></div>
+            <h3>React / Next</h3>
+            <p class="muted">Hooks, SSR, state management</p>
+          </div>
+          <div class="skill-card skill-node" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js</h3>
+            <p class="muted">REST APIs, auth, architecture</p>
+          </div>
+          <div class="skill-card skill-js" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <p class="muted">ESNext, DOM, performance</p>
+          </div>
+          <div class="skill-card skill-laravel" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-laravel"></i></div>
+            <h3>Laravel</h3>
+            <p class="muted">Backend, APIs, MVC</p>
+          </div>
+          <div class="skill-card skill-db" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+            <h3>Databases</h3>
+            <p class="muted">MongoDB, SQL basics, indexing</p>
+          </div>
+          <div class="skill-card skill-git" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-git-alt"></i></div>
+            <h3>Git</h3>
+            <p class="muted">Branching, reviews, collaboration</p>
+          </div>
+          <div class="skill-card skill-html" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-html5"></i></div>
+            <h3>HTML</h3>
+            <p class="muted">Semantic markup, SEO</p>
+          </div>
+          <div class="skill-card skill-css" data-reveal>
+            <div class="skill-icon" aria-hidden="true"><i class="fab fa-css3-alt"></i></div>
+            <h3>CSS</h3>
+            <p class="muted">Layouts, animations, responsiveness</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+    <section id="contact" class="section" aria-label="Contact" data-reveal>
+      <div class="container contact">
+        <div>
+          <h2 class="section-title">Let’s Connect</h2>
+          <p class="muted">Based in <strong>Indore</strong>. Open for freelance and remote opportunities.</p>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:sohit.tiwari@example.com">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <span>
+                <strong>Email</strong>
+                <span class="muted">sohitngd@gmail.com</span>
+              </span>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/sohittiwari/" target="_blank" rel="noreferrer">
+              <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+              <span>
+                <strong>LinkedIn</strong>
+                <span class="muted">https://www.linkedin.com/in/sohittiwari/</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+       <form
+          class="contact-form"
+          id="contact-form"
+          aria-label="Contact form"
+          action="https://formspree.io/f/mbdpvazb"
+          method="POST"
+        >
+  <label>
+    <span>Name</span>
+    <input name="name" placeholder="Full name" required />
+  </label>
+
+  <label>
+    <span>Email</span>
+    <input name="email" type="email" placeholder="Email address" required />
+  </label>
+
+  <label class="full">
+    <span>Subject</span>
+    <input name="subject" placeholder="Project inquiry / collaboration / etc." required />
+  </label>
+
+  <label class="full">
+    <span>Message</span>
+    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+  </label>
+
+  <button class="btn wide" type="submit">Send Message</button>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Sohit Tiwari </p>
+    </div>
+  </footer>
+
+  <div id="contact-toast" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div class="toast-inner">
+      <span class="toast-graphic" aria-hidden="true">
+        <img class="toast-logo" src="./images/logo.png" alt="" width="44" height="44" decoding="async" />
+        <span class="toast-icon-error"><i class="fa-solid fa-circle-exclamation"></i></span>
+      </span>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

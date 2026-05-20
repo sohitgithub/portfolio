@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Premium Globe Branch Locator</title>
+
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      overflow:hidden;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f4f8ff;
+    }
+
+    #globeViz{
+      width:100vw;
+      height:100vh;
+    }
+
+    .heading{
+      position:absolute;
+      top:40px;
+      left:40px;
+      z-index:999;
+      color:#111827;
+    }
+
+    .heading h1{
+      font-size:58px;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+
+    .heading p{
+      font-size:18px;
+      color:#4b5563;
+      max-width:550px;
+      line-height:1.7;
+    }
+
+   .marker{
+  position:relative;
+  transform:translate(-50%, -50%);
+  cursor:pointer;
+  z-index:9999;
+}
+
+    /* ICON */
+
+    .marker img{
+      width:18px;
+      height:18px;
+      object-fit:contain;
+      transition:0.35s ease;
+      filter:drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+      position:relative;
+      z-index:5;
+    }
+
+    .marker:hover img{
+      transform:scale(1.2);
+    }
+
+    /* PULSE EFFECT */
+
+    .pulse{
+      position:absolute;
+      width:18px;
+      height:18px;
+      background:rgba(255,0,0,0.22);
+      border-radius:50%;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      animation:pulse 2s infinite;
+      z-index:1;
+    }
+
+    /* TOOLTIP */
+
+ .tooltip{
+  position:absolute;
+  top:28px;
+  left:12px;
+  width:280px;
+  background:white;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+  border:1px solid rgba(0,0,0,0.06);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:all 0.3s ease;
+
+  z-index:99999;
+
+  pointer-events:none;
+}
+
+    .marker:hover .tooltip{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0px);
+    }
+
+    .tooltip h3{
+      font-size:20px;
+      color:#111827;
+      margin-bottom:6px;
+    }
+
+    .tooltip h4{
+      font-size:14px;
+      color:#2563eb;
+      margin-bottom:10px;
+      font-weight:600;
+    }
+
+    .tooltip p{
+      font-size:14px;
+      color:#4b5563;
+      line-height:1.7;
+    }
+
+    .stats{
+      display:flex;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .stats div{
+      background:#eff6ff;
+      padding:8px 12px;
+      border-radius:12px;
+      font-size:12px;
+      color:#1e40af;
+      font-weight:600;
+    }
+
+    /* ANIMATION */
+
+    @keyframes pulse{
+
+      0%{
+        transform:translate(-50%, -50%) scale(1);
+        opacity:0.5;
+      }
+
+      70%{
+        transform:translate(-50%, -50%) scale(2.4);
+        opacity:0;
+      }
+
+      100%{
+        transform:translate(-50%, -50%) scale(1);
+        opacity:0;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="heading">
+  <h1>Global Presence</h1>
+
+  <p>
+    Discover our worldwide offices, technology hubs, and international business branches through our interactive globe experience.
+  </p>
+</div>
+
+<div id="globeViz"></div>
+
+<script>
+
+const branches = [
+
+  {
+    lat:23.2599,
+    lng:77.4126,
+    city:"Bhopal, India",
+    office:"Head Office",
+    description:"Main development center handling UI/UX design, web applications, backend systems, and enterprise operations.",
+    employees:"120+ Team",
+    projects:"85+ Projects"
+  },
+
+  {
+    lat:28.6139,
+    lng:77.2090,
+    city:"Delhi, India",
+    office:"Marketing Branch",
+    description:"Focused on digital campaigns, Meta advertising, lead generation, SEO growth, and brand strategy.",
+    employees:"65+ Team",
+    projects:"140+ Campaigns"
+  },
+
+  {
+    lat:19.0760,
+    lng:72.8777,
+    city:"Mumbai, India",
+    office:"Sales & Partnerships",
+    description:"Managing nationwide partnerships, enterprise onboarding, startup consulting, and business development.",
+    employees:"40+ Team",
+    projects:"60+ Partners"
+  },
+
+  {
+    lat:40.7128,
+    lng:-74.0060,
+    city:"New York, USA",
+    office:"International Office",
+    description:"Oversees international collaborations, overseas projects, and global technology expansion strategies.",
+    employees:"30+ Team",
+    projects:"25+ Countries"
+  }
+
+];
+
+
+
+const globe = Globe()
+(document.getElementById("globeViz"))
+
+.globeImageUrl(
+'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg'
+)
+
+.bumpImageUrl(
+'https://unpkg.com/three-globe/example/img/earth-topology.png'
+)
+
+.backgroundColor('#f4f8ff')
+
+.htmlElementsData(branches)
+
+.htmlLat(d => d.lat)
+
+.htmlLng(d => d.lng)
+
+.htmlElement(d => {
+
+  const el = document.createElement('div');
+
+  el.className = "marker";
+
+  el.innerHTML = `
+
+    <div class="pulse"></div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+
+    <div class="tooltip">
+
+      <h3>${d.city}</h3>
+
+      <h4>${d.office}</h4>
+
+      <p>${d.description}</p>
+
+      <div class="stats">
+        <div>${d.employees}</div>
+        <div>${d.projects}</div>
+      </div>
+
+    </div>
+
+  `;
+
+
+  const tooltip = el.querySelector('.tooltip');
+
+  el.addEventListener('mouseenter', () => {
+    tooltip.style.opacity = "1";
+    tooltip.style.visibility = "visible";
+    tooltip.style.transform = "translateY(0)";
+  });
+
+  el.addEventListener('mouseleave', () => {
+    tooltip.style.opacity = "0";
+    tooltip.style.visibility = "hidden";
+    tooltip.style.transform = "translateY(10px)";
+  });
+
+  return el;
+
+})
+
+/* AUTO ROTATE */
+
+globe.controls().autoRotate = true;
+
+globe.controls().autoRotateSpeed = 0.45;
+
+
+
+/* ZOOM */
+
+globe.pointOfView({
+  lat:20,
+  lng:78,
+  altitude:2
+}, 1000);
+
+</script>
+
+</body>
+</html>
