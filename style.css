@@ -1953,3 +1953,16 @@ a {
     max-width: none;
   }
 }
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+.service-card{padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+.service-card i{font-size:26px;margin-bottom:12px;color:#7aa2ff}
+.service-card h3{margin:0 0 8px}
+.service-card .price{margin:12px 0 0;font-weight:700}
+.services-note{margin-top:16px;font-size:.9rem}
+
+/* Floating WhatsApp button */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:50;width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);text-decoration:none}
+.wa-float:hover{transform:scale(1.06)}
